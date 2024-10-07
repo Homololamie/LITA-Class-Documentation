@@ -5,3 +5,4 @@ This is where I documented my first project while learning Data Analysis  With T
 SELECT * FROM TABLE1
 WHERE CONDITION = TRUE
 ```
+https://github.com/Homololamie/LITA-Class-Documentation/blob/main/PIE%20CHART.PNG
