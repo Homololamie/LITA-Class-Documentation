@@ -11,6 +11,7 @@ which then enable me to tell compelling stories around the data from the insight
 ### Data Source
 The primary source of data used here is “international breweries .csv” with  1048 rows from the year 2017 to 2019 which was provided by our Trainer “Mr Femi” .
 
+
 ### Tools Used
   - Microsoft Excel for Data Cleaning.
   - Structered Query Language (SQL) for Querying the Data
