@@ -50,13 +50,42 @@ FROM international_breweries
   ``` SQL
   SELECT Countries, SUM(profit) as Total_Profit 
   FROM international_breweries
-  GROUP BY countries
-  ORDER BY sum(profit) DESC;
+  GROUP BY Countries
+  ORDER BY Sum(profit) DESC;
   ```
--	Which year had the highest profit.
--	What is the total profit for the country Nigeria in the last 3 year  (2017, 2018,2019).
--	What is the total profit for each brand in nigeria in year ‘2017’
--	What is the total profit for each brand in Nigeria in the last 3 years ( 2017, 2018 and 2019)
+  3)  Which year had the highest profit.
+  ``` SQL
+SELECT Years, SUM(profit) as Total_profit
+FROM international_breweries
+GROUP BY Years
+ORDER BY SUM(profit) Desc
+LIMIT 1;
+  ```
+4)  What is the total profit for the country Nigeria in the last 3 year  (2017, 2018,2019)
+   ```SQL
+SELECT Countries as 'Country' , Years, SUM(profit) as Total_profit 
+FROM international_breweries
+WHERE Countries = 'Nigeria' 
+GROUP BY Years
+ORDER BY Total_profit DESC
+```
+5)  What is the total profit for each brand in nigeria in year ‘2017’
+  ```SQL
+SELECT brands as 'Brands', SUM(profit) AS 'Total_profit'
+FROM international_breweries
+WHERE Countries = 'Nigeria' AND Years = 2017
+GROUP BY Brands
+ORDER BY 2 DESC
+```
+6)  What is the total profit for each brand in Nigeria in the last 3 years ( 2017, 2018 and 2019)
+ ```SQL
+SELECT YEARS,brands as 'Brands', SUM(profit) AS 'Total_profit'
+FROM international_breweries
+WHERE Countries = 'Nigeria' 
+GROUP BY YEARS,Brands
+ORDER BY 3 DESC
+```
+
 -	What is the total profit for ‘Hero Brand’ in Nigeria in year 2017
 -	Categorize Countries into their language  such as Nigeria and Ghana would be ‘Anglophone’ & Benin, Togo and Senegal would be ‘Francophone’. Also Calculate Their Profit.  
 -	What is the total quantity sold 
