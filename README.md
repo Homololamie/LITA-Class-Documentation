@@ -94,8 +94,18 @@ WHERE brands = 'Hero' AND Countries = 'Nigeria' AND years = 2017
 GROUP BY brands
 ORDER BY 2 desc
 ```
-
--	Categorize Countries into their language  such as Nigeria and Ghana would be ‘Anglophone’ & Benin, Togo and Senegal would be ‘Francophone’. Also Calculate Their Profit.  
+8)  Categorize Countries into their language  such as Nigeria and Ghana would be ‘Anglophone’ & Benin, Togo and Senegal would be ‘Francophone’. Also Calculate Their Profit.
+   ``` SQL
+SELECT countries AS 'Countries', 
+CASE
+WHEN countries IN ('Nigeria', 'Ghana') THEN 'Anglophone'
+ELSE 'Francophone'
+END 'Countries_Group',
+SUM(profit) AS'Total_profit'
+FROM international_breweries
+GROUP BY countries
+ORDER BY 3 DESC
+``` 
 -	What is the total quantity sold 
 -	What is the total quantity sold per brand
 -	What is the overall sales trend
