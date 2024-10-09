@@ -105,14 +105,34 @@ SUM(profit) AS'Total_profit'
 FROM international_breweries
 GROUP BY countries
 ORDER BY 3 DESC
-``` 
--	What is the total quantity sold 
--	What is the total quantity sold per brand
--	What is the overall sales trend
--	What is the total sales per country
-
+```
+9)  What is the total quantity sold
 ```SQL
-SELECT * FROM TABLE1
-WHERE CONDITION = TRUE
+SELECT SUM(quantity)
+FROM international_breweries
+```
+10)  What is the total quantity sold per brand
+```SQL
+SELECT brands AS 'Brands', SUM(quantity)
+FROM international_breweries
+GROUP BY brands
+ORDER BY 2 DESC
+```
+11)  What is the overall sales trend
+```SQL
+SELECT Years AS 'Years', SUM(cost) AS 'Total Sales        '
+FROM international_breweries
+GROUP BY years
+ORDER BY 2 DESC
+``
+
+12)  What is the total sales per country
+```SQL
+SELECT countries AS 'Country', SUM(cost) AS 'Total Sales        '
+FROM international_breweries
+GROUP BY countries
+ORDER BY 2 DESC
+```
+
 ```
 https://github.com/Homololamie/LITA-Class-Documentation/blob/main/PIE%20CHART.PNG
