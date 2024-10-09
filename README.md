@@ -11,6 +11,9 @@ which then enable me to tell compelling stories around the data from the insight
 ### Data Source
 The primary source of data used here is “international breweries .csv” with  1048 rows from the year 2017 to 2019 which was provided by our Trainer “Mr Femi” .
 
+ ###### Screenshot of how the data look is shown below
+![image](https://github.com/user-attachments/assets/14cd3fd2-428d-4bba-80bb-70b385af91b5)
+
 
 ### Tools Used
   - Microsoft Excel for Data Cleaning.
