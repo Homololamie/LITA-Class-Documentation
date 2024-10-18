@@ -1,5 +1,5 @@
 # LITA-Class-Documentation
-This is where I document my first project while learning Data Analysis  With The Incubator Hub
+This is where I document my  project while learning Data Analysis  With The Incubator Hub
 
 ### Project Title: Sales Analysis 
 
